@@ -1,0 +1,91 @@
+import java.util.Properties;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
+public class EnviarCorreo{
+
+	public Properties props;
+	public String mensaje;
+
+
+	public EnviarCorreo(String correo, String nombreCaja, String nombre, String tipoCliente, String fecha, String hora){
+            props = new Properties();
+mensaje = "Bac San José"+"\n"+"www.bac.net/bacsanjose/esp/banco/index.html"+"\n"+"Nombre del Cliente: "+nombre+"\n"+"Tipo de Cliente: "+tipoCliente+"Fecha: "+fecha+"\n"+"Hora: "+hora;
+            mensaje = mensaje+"\n"+"\n"+"Gracias por visitar el Bac San José, para nosostros es un placer atenderles";
+            props.put("mail.transport.protocol", "smtp");
+            props.put("mail.smtp.host", "smtp.live.com");
+            props.put("mail.smtp.socketFactory.port", "587");
+            props.put("mail.smtp.socketFactory.fallback", "false");
+            props.put("mail.smtp.starttls.enable", "true");
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.port", "587");
+
+           Session session = Session.getDefaultInstance(props,
+                        new javax.mail.Authenticator() {
+                             protected PasswordAuthentication getPasswordAuthentication() 
+                             {
+                                   return new PasswordAuthentication("bacSJ31@hotmail.com", "jupiter070417");
+                             }
+                        });
+
+            session.setDebug(true);
+
+            try {
+
+                  Message message = new MimeMessage(session);
+                  message.setFrom(new InternetAddress("bacSJ31@hotmail.com")); 
+
+                  message.setRecipients(Message.RecipientType.TO, 
+                                    InternetAddress.parse(correo)); 
+                  message.setSubject("Asignacion de cajero :"+ nombreCaja);
+                  message.setText(mensaje);
+
+                  MimeMultipart multipart = new MimeMultipart("related");
+
+                  BodyPart messageBodyPart = new MimeBodyPart();
+			         String htmlText = "<H1>Bac San José</H1><img src=\"cid:image\">";
+			         messageBodyPart.setContent(htmlText, "text/html");
+			         // add it
+			         multipart.addBodyPart(messageBodyPart);
+
+			         // second part (the image)
+			         messageBodyPart = new MimeBodyPart();
+			         DataSource fds = new FileDataSource("/home/erneto/Descargas/fhcrcbac.gif");
+
+			         messageBodyPart.setDataHandler(new DataHandler(fds));
+			         messageBodyPart.setHeader("Content-ID", "<image>");
+
+			         // add image to the multipart
+			         multipart.addBodyPart(messageBodyPart);
+
+			         // put everything together
+			         message.setContent(multipart);
+			         // Send message
+			         Transport.send(message);
+			         
+			                  
+
+
+
+             } catch (MessagingException e) {
+                  throw new RuntimeException(e);
+            }
+      }
+}
+
+
+
+
+  
+	

@@ -1,0 +1,40 @@
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class cliente{
+	private String nombre;
+	private String correo;
+	private String fecha;
+	private String hora;
+	private String calificacion;
+
+	public cliente(String calificacion, String nombre, String correo){
+
+		this.nombre = nombre;
+		this.correo = correo;
+		this.calificacion = calificacion;
+        Date date = new Date();
+        DateFormat hourFormat = new SimpleDateFormat("HH:mm:ss");
+        this.hora = hourFormat.format(date);
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        this.fecha = dateFormat.format(date);
+	}
+
+	public String obtenerFecha(){
+		return this.fecha;
+	}
+	public String obtenerHora(){
+		return this.hora;
+	}
+	public String obtenerCorreo(){
+		return this.correo;
+	}
+	public String obtenerNombre(){
+		return this.nombre;
+	}
+	public String obtenerCalificacion(){
+		return this.calificacion;
+	}
+}

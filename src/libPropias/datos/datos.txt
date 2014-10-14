@@ -1,0 +1,100 @@
+Discapacitado
+ernesto
+dfgfdg@gmail.com
+13/10/2014
+08:11:08
+Adulto Mayor
+luuz
+dfgfdg@gmail.com
+13/10/2014
+08:11:22
+Mujer Embarazada
+pp
+dfgfdg@gmail.com
+13/10/2014
+08:11:34
+Mujer Embarazada
+adir
+dfgfdg@gmail.com
+13/10/2014
+08:11:47
+Cliente Corporativo
+adri
+dfgfdg@gmail.com
+13/10/2014
+08:12:13
+Cliente Regular
+pepe
+dfgdfsg@gmail.com
+13/10/2014
+09:22:57
+Mujer Embarazada
+pepedfdf
+dfgdfsg@gmail.com
+13/10/2014
+09:23:59
+Adulto Mayor
+pepedfdf
+dfgdfsg@gmail.com
+13/10/2014
+09:24:25
+Adulto Mayor
+pepedfdf
+dfgdfsg@gmail.com
+13/10/2014
+09:24:49
+Adulto Mayor
+sdfsdf
+dfgdfsg@gmail.com
+13/10/2014
+09:25:06
+Adulto Mayor
+sdfsdf
+dfgdfsg@gmail.com
+13/10/2014
+09:25:16
+Cliente Regular
+sdfsdf
+dfgdfsg@gmail.com
+13/10/2014
+09:25:26
+Cliente Regular
+dsfsdf
+dfgdfsg@gmail.com
+13/10/2014
+09:26:13
+Mujer Embarazada
+pepedfdf
+dfgdfsg@gmail.com
+14/10/2014
+09:23:59
+Adulto Mayor
+pepedfdf
+dfgdfsg@gmail.com
+14/10/2014
+09:24:25
+Adulto Mayor
+pepedfdf
+dfgdfsg@gmail.com
+14/10/2014
+09:24:49
+Adulto Mayor
+sdfsdf
+dfgdfsg@gmail.com
+14/10/2014
+09:25:06
+Adulto Mayor
+sdfsdf
+dfgdfsg@gmail.com
+14/10/2014
+09:25:16
+Cliente Regular
+sdfsdf
+dfgdfsg@gmail.com
+14/10/2014
+09:25:26
+Cliente Regular
+dsfsdf
+dfgdfsg@gmail.com
+14/10/2014
+09:26:13

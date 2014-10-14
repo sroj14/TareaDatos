@@ -1,0 +1,56 @@
+public class ListaCajas{
+	public Caja primerCaja;
+	public Caja ultimaCaja;
+	public int size;
+
+public class Caja{
+	private Caja siguiente;
+	private String estado;
+
+
+	public Caja(String estado){
+        this.siguiente = null;
+        this.estado = estado;
+
+	}
+
+	public String obtenerEstado(){
+		return this.estado;
+	}
+
+	public void establecerSiguiente(Cajero siguiente){
+		this.siguiente = siguiente;
+	}
+
+ 
+    public Caja obtenerSiguiente(){
+            return this.siguiente;
+     }
+
+}
+public int obtenerTamaño(){
+     return this.size;
+}
+
+public ListaCajas(){
+    this.primerCaja = null;
+    this.ultimaCaja = null;
+	
+}
+
+public void  insertar(String estado){
+     Caja caja = new Caja(estado);
+
+	if(primerCaja == null){
+		this.primerCaja = caja;
+		this.ultimaCaja = caja;
+	}
+	else{
+		this.ultimaCaja.establecerSiguiente(caja);
+		this.ultimaCaja = caja;
+	}
+	size++;
+
+}
+
+}
